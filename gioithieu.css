@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #272727;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem; /* Tăng kích thước chữ */
+}
+
+/* Menu */
+.menu {
+    background-color: #fff;
+    color: gray;
+    padding: 10px 0;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ff9900;
+}
+
+/* Banner Section - ảnh chiếm toàn bộ chiều rộng */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Chiều cao chiếm 60% của màn hình */
+    background-image: url('img/Sheraton-Bratislava-Hotel_Executive-Bedroom-1600x900.jpg');
+    background-size: cover; /* Phủ kín không gian */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner .titlee {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.banner .titlee h2 {
+    font-size: 2.5rem;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.banner .titlee p {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+/* Introduction Section */
+.gt {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.gt .gt1,
+.gt .gt3 {
+    width: 32%;
+}
+
+.gt .gt2 {
+    width: 32%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gt .gt1 img,
+.gt .gt3 img {
+    width: 100%;
+    height: 300px; /* Đảm bảo ảnh luôn có chiều cao lớn */
+    object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gt1 img:hover,
+.gt3 img:hover {
+    transform: scale(1.05);
+}
+
+.gt2 h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.gt3 {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gt3 h3 {
+    font-size: 1.6rem;
+    color: #ff9900;
+    margin-bottom: 15px;
+}
+
+.gt3 .gg {
+    margin-top: 10px;
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3c3c3c;
+    color: #ccc;
+    padding: 50px 0;
+    margin-top: 60px;
+}
+
+.footer h3 {
+    color: #ff9900;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.footer .ft1,
+.footer .ft2,
+.footer .ft3 {
+    width: 30%;
+}
+
+.footer a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Render Section */
+.render {
+    background-color: #272727;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* Image Change Hover Effect */
+.image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh; /* Chiều cao banner giảm khi trên thiết bị di động */
+    }
+
+    .gt {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gt .gt1,
+    .gt .gt3,
+    .gt .gt2 {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .ft1,
+    .footer .ft2,
+    .footer .ft3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
